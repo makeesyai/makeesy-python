@@ -1,0 +1,2 @@
+1. Download and install python from- https://www.python.org/
+2. Download and install Pycharm community edition- https://www.jetbrains.com/pycharm/download/#section=windows
