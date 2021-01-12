@@ -19,6 +19,15 @@ bytes(int) -> bytes object of size given by the parameter initialized with null 
 bytes() -> empty bytes object
 """
 
+# TYPE CASTING
+# INT <--> FLOAT
+
+# INT <--> STRING (ERROR)
+
+# STR <--> BYTE
+
+# INT --> BYTE
+
 # Duck-typing is not dynamic typing:
 # In Duck-typing, any operation doesn't put any formal requirements
 # on it's operands' data types, but "just tries it out" what is given (separate video)
