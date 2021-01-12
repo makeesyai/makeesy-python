@@ -2,29 +2,22 @@
 # then it will automatically know whether the value
 # given would be an int, float, or char or even a str.
 
-# var = 123
-# print(var)
-# print(type(var))
+# INTEGER
 
-# var = 123.0
-# print(var)
-# print(type(var))
+# FLOAT
 
-# var = 'Hello World'
-# print(var)
-# print(type(var))
+# STRING
 
-# var = 'H'
-# print(var)
-# print(type(var))
-var = "Hello world"
-var_bytes = bytes(var, encoding='utf8')
-for item in var_bytes:
-    print(item, chr(item))
-print(var_bytes)
-print(type(var_bytes))
-print(var.encode())
-print(var_bytes.decode())
+# CHARACTER: string with length one
+
+# BYTES
+"""
+bytes(iterable_of_ints) -> bytes
+bytes(string, encoding[, errors]) -> bytes
+bytes(bytes_or_buffer) -> immutable copy of bytes_or_buffer
+bytes(int) -> bytes object of size given by the parameter initialized with null bytes
+bytes() -> empty bytes object
+"""
 
 # Duck-typing is not dynamic typing:
 # In Duck-typing, any operation doesn't put any formal requirements
