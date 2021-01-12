@@ -28,6 +28,6 @@ bytes() -> empty bytes object
 
 # INT --> BYTE
 
-# Duck-typing is not dynamic typing:
+# Duck-typing != dynamic typing:
 # In Duck-typing, any operation doesn't put any formal requirements
 # on it's operands' data types, but "just tries it out" what is given (separate video)
