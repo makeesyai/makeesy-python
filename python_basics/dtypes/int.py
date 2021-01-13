@@ -4,3 +4,5 @@
 # Types: int, float, str, bytes
 
 # INTEGER
+
+# TYPE CASTING

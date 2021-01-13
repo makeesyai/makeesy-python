@@ -7,6 +7,7 @@ bytes(int) -> bytes object of size given by the parameter initialized with null 
 bytes() -> empty bytes object
 """
 
+# TYPE CASTING
 
 # Duck-typing is not dynamic typing:
 # In Duck-typing, any operation doesn't put any formal requirements
