@@ -4,7 +4,7 @@
 # Since sets are unordered, we cannot access items using indexes like we do in lists.
 # Types: Normal and Frozen set
 # Create, Operations: add, remove, pop, Print,
-var_set = {"Hello", "World"}
+var_set = {"Hello", "World", "Hello", "Hello"}
 print(var_set)
 print(type(var_set))
 # var_set = set()
