@@ -1,3 +1,13 @@
 # Tuple: is just like list with the exception that tuples cannot be changed once declared.
 # Tuples are usually faster than lists.
-# Create, Operations: add, get, del, replace, Print,
+# Create, Operations: get (by indexing), replace(completely), Print,
+# var_tuple = tuple()
+# print(var_tuple)
+# print(type(var_tuple))
+var_tuple = ("hello", "world")
+# item = var_tuple[1]
+# var_tuple[1] = "python"
+# print(item)
+var_tuple = (123, 234)
+print(var_tuple)
+print(type(var_tuple))

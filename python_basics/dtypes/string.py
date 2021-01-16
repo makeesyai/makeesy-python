@@ -1,5 +1,4 @@
 # STRING
-
-# CHARACTER: string with length one
-
-# TYPE CASTING
+str_var = "Hello World"
+print(str_var)
+print(type(str_var))
