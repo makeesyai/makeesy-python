@@ -14,7 +14,7 @@ print(var_set)
 print(type(var_set))
 
 # the frozenset immutable i.e. we can not change it after creation
-frozen_set = frozenset({"hello", 234, 5.44, 89, 5.44})
+frozen_set = frozenset({"hello", 234, 5.44, 89, 5.44})  # Build an immutable unordered collection of unique elements.
 # frozen_set.add(345) # uncommenting this will throw an error
 print(frozen_set)
 print(type(frozen_set))
