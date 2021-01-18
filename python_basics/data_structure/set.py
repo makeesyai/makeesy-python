@@ -5,7 +5,7 @@
 # Types: Normal and Frozen set
 
 # Create empty set
-# var_set = set()
+var_set = set()
 
 # Create set with values (include duplicates)
 

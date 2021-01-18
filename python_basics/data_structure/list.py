@@ -6,8 +6,8 @@
 # it need not be always homogeneous i.e. a single list can contain strings, integers, as well as objects.
 
 # Create empty
-# var_list = list()
-# var_list = []
+var_list = list()
+var_list = []
 
 # Create with values
 

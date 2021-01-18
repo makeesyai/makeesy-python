@@ -2,8 +2,8 @@
 # Tuples are usually faster than lists.
 
 # Create empty, (not of much use, as can not be modified)
-# var_tuple = ()
-# var_tuple = tuple()
+var_tuple = tuple()
+var_tuple = ()
 
 # Create with values,
 
