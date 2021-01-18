@@ -10,5 +10,3 @@ var_dict = {}
 # Add new element
 
 # Replace an existing element
-
-# get(by key), Print,

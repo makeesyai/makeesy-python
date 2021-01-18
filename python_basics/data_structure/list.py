@@ -11,7 +11,7 @@ var_list = []
 
 # Create with values
 
-# Get (indexing),
+# Get (indexing)
 
 # Replace (indexing)
 

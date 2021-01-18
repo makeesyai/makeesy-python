@@ -5,7 +5,7 @@
 var_tuple = tuple()
 var_tuple = ()
 
-# Create with values,
+# Create with values
 
 # get (by indexing)
 

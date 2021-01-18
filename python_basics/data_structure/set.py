@@ -13,7 +13,7 @@ var_set = set()
 
 # Add
 
-# Remove,
+# Remove
 
 # Pop (removes a random item and returns the item)
 
