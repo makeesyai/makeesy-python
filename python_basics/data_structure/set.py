@@ -3,21 +3,26 @@
 # which is actually based on hash-table .
 # Since sets are unordered, we cannot access items using indexes like we do in lists.
 # Types: Normal and Frozen set
-# Create, Operations: add, remove, pop, Print,
 
+# Create empty set
+var_set = set()
 
-# var_set = set()  # Empty set
-var_set = {"Hello", "World", "Hello", "Hello"}
-print(var_set)
-print(type(var_set))
-# var_set = set()
-var_set.add("python")
-item = var_set.pop()
-print(var_set)
-print(type(var_set))
+# Create set with values (include duplicates)
+
+# Get
+
+# Add
+
+# Remove
+
+# Pop (removes a random item and returns the item)
+
+# Frozen is set (immutable set i.e. we can not change it after creation)
+
 
 # the frozenset immutable i.e. we can not change it after creation
-frozen_set = frozenset({"hello", 234, 5.44, 89, 5.44})  # Build an immutable unordered collection of unique elements.
+# Builds an immutable unordered collection of unique elements.
+frozen_set = frozenset({"hello", 234, 5.44, 89, 5.44, 89, "hello", "Hello"})
 # frozen_set.add(345) # uncommenting this will throw an error
 print(frozen_set)
 print(type(frozen_set))
