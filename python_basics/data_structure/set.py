@@ -5,20 +5,30 @@
 # Types: Normal and Frozen set
 
 # Create empty set
-var_set = set()
-
+# var_set = set()
+# print(var_set)
+# print(type(var_set))
 # Create set with values (include duplicates)
-
-# Get
+# var_set = set()
+# var_set = {"hello", "hello", 123, 456}
+# print(var_set)
+# print(type(var_set))
+# Get (not allowed)
+# item = var_set[0]
 
 # Add
+# var_set.add("Python")
+# print(var_set)
 
 # Remove
+# var_set.remove(123)
+# print(var_set)
 
 # Pop (removes a random item and returns the item)
-
+# item = var_set.pop()
+# print(var_set)
+# print("Popped item is:", item)
 # Frozen is set (immutable set i.e. we can not change it after creation)
-
 
 # the frozenset immutable i.e. we can not change it after creation
 # Builds an immutable unordered collection of unique elements.
