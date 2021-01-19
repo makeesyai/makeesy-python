@@ -3,5 +3,8 @@
 
 
 # Pass by Reference or pass by value?
-# One important thing to note is, in Python every variable name is a reference.
-# When we pass a variable to a function, a new reference to the object is created.
+"""
+In Python,Values are passed to function by object reference.
+1. if object is immutable (not modifiable) than the modified value is not available outside the function.
+2. if object is mutable (modifiable) than modified value is available outside the function.
+"""
