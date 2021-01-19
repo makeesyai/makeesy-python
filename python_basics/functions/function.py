@@ -1,7 +1,12 @@
 # Function: The idea of function is to put some commonly or repeatedly done task together and make a function,
 # so that instead of writing the same code again and again for different inputs, we can call the function.
 
+# Illustrate the code repetition with print two lists (integer, strings),
+# then implement the same using function
+# Optional Attributes: arguments, doc string, return statement
 
-# Pass by Reference or pass by value?
-# One important thing to note is, in Python every variable name is a reference.
-# When we pass a variable to a function, a new reference to the object is created.
+# Function with Doc String (add doc string and print)
+
+# Scope of variables (define the same variable in global and function scope)
+
+# Function with return value (no arguments)
