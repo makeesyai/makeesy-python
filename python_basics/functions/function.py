@@ -4,6 +4,16 @@
 # Illustrate the code repetition with print two lists (integer, strings),
 # then implement the same using function
 # Optional Attributes: arguments, doc string, return statement
+
+# def print_hello():
+#     print("Hello world")
+#
+#
+# print_hello()
+
+
+# Function with Doc String (add doc string and print)
+
 # def print_hello():
 #     """
 #     This function prints hello world
@@ -14,8 +24,6 @@
 #
 # print_hello()
 # print(print_hello.__doc__)
-
-# Function with Doc String (add doc string and print)
 
 # Scope of variables (define the same variable in global and function scope)
 
@@ -29,7 +37,6 @@
 # print(x)
 
 # Function with return value (no arguments)
-
 
 def greet():
     return f"Hello, {name} Good morning!"
