@@ -9,7 +9,7 @@ def greet(name):
 
 
 name1 = "Raj Nath Patel"
-name2 = "RaJ Kumar"
+name2 = "Raj Kumar"
 return_value = greet(name1)  # Call function with return value
 print(return_value)
 return_value = greet(name2)  # Call function with return value
