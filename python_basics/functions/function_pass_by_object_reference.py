@@ -12,8 +12,8 @@ print("ID for new 3: ", id(num))
 
 
 # NAME-BINDING in Python
-# In python (almost) everything is an object. And the variables are commonly known as "names". And the assignment "="
-# assigns the object (right side) a name (left side) in a defined scope.
+# In python (almost) everything is an object. And the variables are more commonly known as "names".
+# And the assignment "=" binds the object (right side) with a name (left side) in a defined scope.
 
 
 # Pass-by-value or Pass-by-Reference?
@@ -31,38 +31,39 @@ Rules to remember:
 1. if object is immutable (not modifiable) than the modified value is not available outside the function. Because we
 can not change the content without changing name-binding
 
-2. if object is mutable (modifiable) than modified value is available outside the function (provided we don't
-change the name-binding before changing it). As we can change the content without changing name-binding
+2. if object is mutable (modifiable) than modified value is available outside the function As we can change the content 
+without changing name-binding ***(provided we don't alter the name-binding before changing it)***.
 
 # Illustrate the example with a immutable (integer) and mutable (list) object
 """
 
-# def immutable(first_value, second_value):
-#     print('ID in function for val1:', id(first_value))
-#     print('ID in function for val2:', id(second_value))
-#     first_value = second_value + 1  # A new object is created as first_value is immutable
-#     print('ID in function for val1:', id(first_value))
+
+def immutable(first_value, second_value):
+    print('ID in function for val1:', id(first_value))
+    print('ID in function for val2:', id(second_value))
+    first_value = second_value + 1  # A new object is created as first_value is immutable
+    print('ID in function for val1:', id(first_value))
 
 
-# def mutable(value_lst):
-#     new_lst = value_lst  # No new object is created
-#     new_lst[0] = 5000  # New object created
-#     # new_lst = [123, 456]  # New object is created
-#     # new_lst[0] = 5000
-#     print(new_lst, id(new_lst))
+def mutable(value_lst):
+    new_lst = value_lst  # No new object is created
+    new_lst[0] = 5000  # New object created
+    # new_lst = [123, 456]  # New object is created
+    # new_lst[0] = 5000
+    print(new_lst, id(new_lst))
 
 
-# val1 = 123
-# val2 = 456
-# val(val1, val2)
-# print('ID in local for val1:', id(val1))
-# print('ID in local for val2:', id(val2))
+val1 = 123
+val2 = 456
+immutable(val1, val2)
+print('ID in local for val1:', id(val1))
+print('ID in local for val2:', id(val2))
 
 
-# lst_values = [1, 2, 3, 4, 5]
-# print(lst_values, id(lst_values))
-# mutable(lst_values)
-# print(lst_values, id(lst_values))
+lst_values = [1, 2, 3, 4, 5]
+print(lst_values, id(lst_values))
+mutable(lst_values)
+print(lst_values, id(lst_values))
 
 
 # Never use mutable data structure as default function argument
