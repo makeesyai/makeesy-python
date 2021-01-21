@@ -5,11 +5,13 @@
 # In Python
 num = 1  # A nameless integer object with value 1 is created somewhere in memory, then the object is named as "num"
 print("ID for 1: ", id(num))
+
 num = 3  # New nameless integer object with value 3 is created somewhere in memory, then the object is named as "num"
 print("ID for 3: ", id(num))
+
 num2 = 3  # If an object exist in the current scope, that will be re-used, here 3 already exist so it will re-use that
 print("ID for new 3: ", id(num2))
-
+print()
 
 # NAME-BINDING in Python
 # In python (almost) everything is an object. And the variables are more commonly known as "names".
@@ -30,9 +32,11 @@ by object reference (also known as Call-by-object-reference).
 Rules to remember:
 1. if object is immutable (not modifiable) than the modified value is not available outside the function. Because we
 can not change the content without changing name-binding
+Example: int, float, string, tuple, frozenset(immutable version of set), bytes.
 
 2. if object is mutable (modifiable) than modified value is available outside the function As we can change the content 
 without changing name-binding ***(provided we don't alter the name-binding before changing it)***.
+Example: list, dict, set, byte array
 
 # Illustrate the example with a immutable (integer) and mutable (list) object
 """
@@ -63,7 +67,7 @@ print(val2, id(val2))
 immutable_example(val1, val2)
 print("After the function call.")
 print(val1, id(val1))
-
+print()
 
 lst = [1, 2, 3, 4, 5]
 print(lst, id(lst))
