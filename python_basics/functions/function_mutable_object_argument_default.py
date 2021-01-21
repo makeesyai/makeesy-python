@@ -1,16 +1,16 @@
 # Never use mutable object as default function argument
 # (default values of the arguments are evaluated ***only once*** when the control reaches the function)
 
-def add_item_to_dict(key, value, target_list=None):
-    if target_list is None:
-        target_list = {}
+def add_item_to_dict(key, value, target_dict=None):
+    if target_dict is None:  # if target_dict is not passed as an argument create an empty dict
+        target_dict = {}
     print(locals())
-    target_list[key] = value
-    return target_list
+    target_dict[key] = value
+    return target_dict
 
 
 def add_item_to_list(item, target_list=None):
-    if target_list is None:
+    if target_list is None:  # if target_list is not passed as an argument create an empty list
         target_list = []
     print(locals())
     target_list.append(item)
