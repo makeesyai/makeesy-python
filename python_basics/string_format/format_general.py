@@ -1,15 +1,13 @@
 # Why we need string formatting?
 # Example: sum of two numbers
 
+a = 60
+b = 56
 
-# a = 60
-# b = 56
-#
-# added = a + b
-# mul = a * b
-# print("The sum of 60, and 56 is: ", added)
-# print("The multiplication of 60, and 56 is: ", mul)
-
+added = a + b
+mul = a * b
+print("The sum of 60, and 56 is: ", added)
+print("The multiplication of 60, and 56 is: ", mul)
 
 """
 SYNTAX: "Some % PLACEHOLDER String" % values
@@ -37,29 +35,29 @@ built-in repr()/print() function would choose
 the one with 17 significant digits (including decimal point)
 """
 # The modulo operator.
-# a = 45
-# b = 60
-#
-# added = a + b
-# mul = a * b
-# print("The sum of %d, and %d is: %d" % (a, b, added))
-# print("The sum of %o, and %o is: %o" % (a, b, added))
-# print("The sum of %x, and %x is: %x" % (a, b, added))
+a = 45
+b = 60
 
-# print("The multiplication of %d, and %d is: %d" % (a, b, mul))
+added = a + b
+mul = a * b
+print("The sum of %d, and %d is: %d" % (a, b, added))
+print("The sum of %o, and %o is: %o" % (a, b, added))
+print("The sum of %x, and %x is: %x" % (a, b, added))
+
+print("The multiplication of %d, and %d is: %d" % (a, b, mul))
 
 # Formatters
 # Example with multiple place holders.
 # Example with Positional and Keyword Arguments
-# a = 45.5
-# b = 60.4
-#
-# added = a + b
-# mul = a * b
-#
-# print("The sum of {operand1:.2f}, and {operand2:.2f} is:{sum:.2f}".
-#       format(sum=added, operand1=a, operand2=b))
-# print("The multiplication of {}, and {} is:{}".format(a, b, added))
+a = 45.5
+b = 60.4
+
+added = a + b
+mul = a * b
+
+print("The sum of {operand1:.2f}, and {operand2:.2f} is:{sum:.2f}".
+      format(sum=added, operand1=a, operand2=b))
+print("The multiplication of {}, and {} is:{}".format(a, b, mul))
 
 """
 Usage2: Data Representation
