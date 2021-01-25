@@ -1,65 +1,80 @@
 # f/F-strings.
 # Simple Syntax
-a = 45
-b = 46
-added = a + b
 
-
-def my_sum(x, y):
+def add_num(x, y):
     return x + y
 
 
-# print(f'The sum of {a}, and {b} is: {added}')
-# print(F'The sum of {a}, and {b} is: {my_sum(a,b)}')
-# print(F'The sum of {a}, and {b} is: {a + b}')
-# print(F'The sum of {a}, and {b} is: {a*b}')
+a = 40
+b = 45
+added = a + b
+mul = a * b
 
-print(f'The sum of {a}, and {b} is: {added} \n'
-      f'The sum of {a}, and {b} is: {my_sum(a,b)} \n'
-      f'The sum of {a}, and {b} is: {a*b}')
+print("The sum of {}, and {} is:{}".format(a, b, added))
+print(f"The sum of {a}, and {b} is:{sum}")
 
-# Arbitrary Expressions
+# Arbitrary Expressions (add, function call etc)
+print(f"The sum of {a}, and {b} is:{a+b}")
+print(f"The sum of {a}, and {b} is:{add_num(a, b)}")
+
 # Multiline f-Strings
+print(f'The sum of {a}, and {b} is:{a + b} \n'
+      f'The sum of {a}, and {b} is:{a * b} \n'
+      f'The sum of {a}, and {b} is:{add_num(a, b)}')
 
 # Speed
-# import timeit
-# time_taken = timeit.timeit("""
-# name = "Eric"
-# age = 74
-# '%s is %s.' % (name, age)
-# """, number=10000)
-# print('Modulo:', time_taken)
-#
-# time_taken = timeit.timeit("""
-# name = "Eric"
-# age = 74
-# '{} is {}.'.format(name, age)
-# """, number=10000)
-# print('Format:', time_taken)
-#
-# time_taken = timeit.timeit("""
-# name = "Eric"
-# age = 74
-# f'{name} is {age}.'
-# """, number=10000)
-# print('fstring:', time_taken)
+import timeit
+code_modulo = """
+a = 45
+b = 56
+added = a + b
+mul = a * b
+'The sum of %d, and %d is: %d' % (a, b, added)
+'The multiplication of %d, and %d is: %d' % (a, b, mul)
+"""
+
+print(timeit.timeit(code_modulo, number=1000))
+
+code_format = """
+a = 45
+b = 56
+added = a + b
+mul = a * b
+'The sum of {}, and {} is: {}'.format(a, b, added)
+'The multiplication of {}, and {} is: {}'.format(a, b, mul)
+"""
+print(timeit.timeit(code_format, number=1000))
+
+code_fstring = """
+a = 45
+b = 56
+added = a + b
+mul = a * b
+f'The sum of {a}, and {b} is: {added}'
+f'The multiplication of {a}, and {b} is: {mul}'
+"""
+print(timeit.timeit(code_fstring, number=1000))
+
 
 # Remember
 # Quotation Marks
-print(f"The sum of '{a}' and '{b}' is: '{a+b}'")
+print(f"The sum of '{a}', and '{b}' is:'{added}'")
+
 # Dictionaries
-math = {'a': a, 'b': b, "sum": added}
-print(f"The sum of \"{math['a']}\" and \"{math['b']}\" is: \"{math['sum']}\"")
+math_dict = {"a":a, "b": b, "sum": added}
+print(f"The sum of '{math_dict['a']}', and '{math_dict['b']}' is:'{math_dict['sum']}'")
 
 # Braces
-print(f'The sum of {{{ {a} }}} and {{{ {b} }}} is: {a+b}')
+print(f"The sum of {{{{{ {a} }}}}}, and {{{{{ {b} }}}}} is:{{{{{ {added} }}}}}")
 
 # Template strings.
 from string import Template
-info = {'a': a, "b": b, "sum": added}
-template = Template("The sum of $a and $b is: $sum")
-print(template.substitute(a=a, b=b, sum=added))
-print(template.safe_substitute(a=a, b=b))
+template = Template("The sum of $a, and $b is: $sum")
+template_formatted = template.substitute(a=a, b=b, sum=added)
+print(template_formatted)
+
+template_formatted = template.safe_substitute(a=a, b=b)
+print(template_formatted)
 
 # CONCLUSION
 # User-obtained: Template
