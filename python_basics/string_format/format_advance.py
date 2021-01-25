@@ -1,80 +1,82 @@
-# f/F-strings.
+# Why f-string
+# First and far-most, it is faster than the other methods!
+# Also, we'll see, it is more readable, more concise,
+# and less prone to error compare to other formatting methods
+
 # Simple Syntax
 
 def add_num(x, y):
     return x + y
 
 
-a = 40
-b = 45
+a = 45
+b = 50
 added = a + b
 mul = a * b
-
 print("The sum of {}, and {} is:{}".format(a, b, added))
-print(f"The sum of {a}, and {b} is:{sum}")
-
-# Arbitrary Expressions (add, function call etc)
-print(f"The sum of {a}, and {b} is:{a+b}")
+print(f"The sum of {a}, and {b} is:{added}")
+print(f"The sum of {a}, and {b} is:{a + b}")
 print(f"The sum of {a}, and {b} is:{add_num(a, b)}")
 
-# Multiline f-Strings
-print(f'The sum of {a}, and {b} is:{a + b} \n'
-      f'The sum of {a}, and {b} is:{a * b} \n'
-      f'The sum of {a}, and {b} is:{add_num(a, b)}')
+print(f"The sum of {a}, and {b} is:{added} \n"
+      f"The sum of {a}, and {b} is:{a + b} \n"
+      f"The sum of {a}, and {b} is:{add_num(a, b)}")
+
 
 # Speed
 import timeit
-code_modulo = """
-a = 45
-b = 56
-added = a + b
-mul = a * b
-'The sum of %d, and %d is: %d' % (a, b, added)
-'The multiplication of %d, and %d is: %d' % (a, b, mul)
-"""
-
-print(timeit.timeit(code_modulo, number=1000))
 
 code_format = """
 a = 45
-b = 56
+b = 50
 added = a + b
-mul = a * b
-'The sum of {}, and {} is: {}'.format(a, b, added)
-'The multiplication of {}, and {} is: {}'.format(a, b, mul)
+"The sum of {}, and {} is:{}".format(a, b, added)
 """
-print(timeit.timeit(code_format, number=1000))
+print(timeit.timeit(code_format, number=100000))
+
+code_modulo = """
+a = 45
+b = 50
+added = a + b
+"The sum of %d, and %d is:%d" % (a, b, added)
+"""
+
+print(timeit.timeit(code_modulo, number=100000))
 
 code_fstring = """
 a = 45
-b = 56
+b = 50
 added = a + b
-mul = a * b
-f'The sum of {a}, and {b} is: {added}'
-f'The multiplication of {a}, and {b} is: {mul}'
+f"The sum of {a}, and {b} is:{added}"
 """
-print(timeit.timeit(code_fstring, number=1000))
+print(timeit.timeit(code_fstring, number=100000))
 
 
-# Remember
+# Tricks to Remember
 # Quotation Marks
-print(f"The sum of '{a}', and '{b}' is:'{added}'")
+a = 45
+b = 50
+added = a + b
+
+print(f"The \"sum\" of '{a}' and '{b}' is:'{added}'")
 
 # Dictionaries
-math_dict = {"a":a, "b": b, "sum": added}
-print(f"The sum of '{math_dict['a']}', and '{math_dict['b']}' is:'{math_dict['sum']}'")
-
+math_dict = {"a": a, "b":b, "sum":added}
+print(f"The \"sum\" of '{math_dict['a']}' and '{math_dict['b']}' "
+      f"is:'{math_dict['sum']}'")
 # Braces
-print(f"The sum of {{{{{ {a} }}}}}, and {{{{{ {b} }}}}} is:{{{{{ {added} }}}}}")
+print(f"The \"sum\" of '{{{ {a} }}}' and '{b}' is:'{added}'")
+
 
 # Template strings.
 from string import Template
-template = Template("The sum of $a, and $b is: $sum")
-template_formatted = template.substitute(a=a, b=b, sum=added)
-print(template_formatted)
+a = 45
+b = 50
+added = a + b
+template = Template("The sum of $a, and $b is $sum.")
+print(template.substitute(a=a, b=b, sum=added))
+print(template.safe_substitute(a=a, b=b))
 
-template_formatted = template.safe_substitute(a=a, b=b)
-print(template_formatted)
 
 # CONCLUSION
 # User-obtained: Template
