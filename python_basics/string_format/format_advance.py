@@ -12,12 +12,17 @@ def add_num(x, y):
 a = 45
 b = 50
 added = a + b
-mul = a * b
 print("The sum of {}, and {} is:{}".format(a, b, added))
+
+# can use both f or F
 print(f"The sum of {a}, and {b} is:{added}")
+print(F"The sum of {a}, and {b} is:{added}")
+
+# Expressions Example
 print(f"The sum of {a}, and {b} is:{a + b}")
 print(f"The sum of {a}, and {b} is:{add_num(a, b)}")
 
+# Multiline fstring
 print(f"The sum of {a}, and {b} is:{added} \n"
       f"The sum of {a}, and {b} is:{a + b} \n"
       f"The sum of {a}, and {b} is:{add_num(a, b)}")
