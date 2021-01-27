@@ -1,3 +1,4 @@
+# The basic operators are simple (we will focus mainly on exceptions)
 # Arithmetic operators (+, -, *,  /, //, %, **)
 # Arithmetic Operator Functions [add, sub, mul, truediv,
 # floordiv, mod, pow]
@@ -31,6 +32,26 @@ print(power)
 print(power_fun)
 
 
+a = 5
+b = 2
+added = a + b
+multiplication = a * b
+order = a ** b
+print(order)
+div = a/2
+div = a//2
+div = a%2
+print(div)
+
+
+
+
+
+
+
+
+
+
 # Assignment operators (=, +=, -=, *=, /=, //=, %=, **=)
 a = 5
 b = 3
@@ -57,7 +78,7 @@ b = 3
 a **= b
 print(a)
 
-# Operator Precedence (BODMAS)
+# Operator Precedence (BODMAS: Bracket, Order, Div, Mul, Add, Sub)
 a = 5
 b = 3
 out = a * b / a - b + a
