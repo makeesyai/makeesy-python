@@ -24,10 +24,6 @@ print(a != b)
 print(operator.ne(a, b))
 print()
 
-print(a <= b)
-print(operator.le(a, b))
-print()
-
 print(a >= b)
 print(operator.ge(a, b))
 print()
