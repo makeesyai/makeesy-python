@@ -9,7 +9,8 @@ print("ID for 1: ", id(num))
 num = 3  # New nameless integer object with value 3 is created somewhere in memory, then the object is named as "num"
 print("ID for 3: ", id(num))
 
-num2 = 3  # If an object exist in the current scope, that will be re-used, here 3 already exist so it will re-use that
+num2 = 3  # If an object exist in the current scope, that will be re-used,
+# here 3 already exist so it will re-use that: This process in Python is called "Interning"
 print("ID for new 3: ", id(num2))
 print()
 
