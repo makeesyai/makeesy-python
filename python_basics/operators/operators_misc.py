@@ -37,6 +37,12 @@ print(f'Exp2:{exp2}, and the negation of exp2:{not exp2}')
 # Remember: "is" is different from "==". "is" tells you if two objects are the
 # same but "==" tells you if their content or value is the same.
 
+x = "Hello World" * 372  # + will disable the interning
+y = "Hello World" * 372
+print(len(x), len(y))
+print(x is y)
+
+
 # Membership: "x in y, x not in y"
 
 # Any: Returns True if any item in iterator is True. Returns false if empty or all False
