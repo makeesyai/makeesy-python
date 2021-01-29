@@ -7,12 +7,16 @@ exp2 = a > b
 print(f"The exp2 is {exp2}")
 exp3 = a != b
 print(f"The exp3 is {exp3}")
-
 print()
+
 print(exp1 and exp2)
 print()
+
 print(exp1 or exp2)
 print()
+
+# not operator has less precedence compared
+# to relational operators
 print(not a)
 print((not a) == b)
 print()
@@ -33,6 +37,8 @@ else:
 # Logical "and", and "or" operators in Python returns
 # an operand's value whereas other
 # language like C/C++ operators &&, and || returns 0 and 1
-
+print()
 print(0 or 234 or {} or "This is true")  # print 234
+
+print()
 print(345 and 234 and "True" and "This is true")  # print "This is true"
