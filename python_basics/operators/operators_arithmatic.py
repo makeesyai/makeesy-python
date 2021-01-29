@@ -31,27 +31,6 @@ print(mod_fun)
 print(power)
 print(power_fun)
 
-
-a = 5
-b = 2
-added = a + b
-multiplication = a * b
-order = a ** b
-print(order)
-div = a/2
-div = a//2
-div = a%2
-print(div)
-
-
-
-
-
-
-
-
-
-
 # Assignment operators (=, +=, -=, *=, /=, //=, %=, **=)
 a = 5
 b = 3
