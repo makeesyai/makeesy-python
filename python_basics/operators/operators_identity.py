@@ -9,67 +9,68 @@
 
 x = 233456567766777
 y = 233456567766777  # Immutable object
-
 print(x is y)  # True
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print('Numbers', end='\n\n')
+
 
 x = frozenset()
 y = frozenset()  # Immutable empty Object
-
 print(x is y)  # True
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print('Empty frozenset', end='\n\n')
 
 x = frozenset({1, 2, 3})
 y = frozenset({1, 2, 3})  # Immutable Object but not interned
-
 print(x is y)  # False
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print('Non empty frozenset', end='\n\n')
 
 x = list()
 y = list()  # Mutable empty Object
-
 print(x is y)  # False
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print("Empty list", end='\n\n')
 
 x = 1.2
 y = 1.2  # Immutable object
-
 print(x is y)  # True
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print('Floats', end='\n\n')
 
 x = "Hello Python"
 y = "Hello Python"  # Immutable object
-
 print(x is y)  # True
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print('Strings', end='\n\n')
 
 x = (1, 2, 3)
 y = (1, 2, 3)  # Immutable Object
-
 print(x is y)  # True
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print('Tuple', end='\n\n')
 
 x = [1, 2, 3]
 y = [1, 2, 3]  # Mutable object
-
 print(x is y)  # False
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print('List', end='\n\n')
 
 x = {1, 2, 3}  # Mutable object
 y = {1, 2, 3}
@@ -77,6 +78,7 @@ print(x is y)  # False
 print(x == y)  # True
 print(id(x))
 print(id(y))
+print('Set', end='\n\n')
 
 # Interning in Python: The objects that Python does interning
 # on them are- Immutable objects- integer, float, booleans, bytes, tuple,
