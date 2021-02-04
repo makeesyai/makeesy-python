@@ -9,3 +9,4 @@
 # CALL: func()
 # from p1.p2.module import func as f
 # CALL: f()
+# __main__ code block in module
