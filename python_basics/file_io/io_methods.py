@@ -14,6 +14,28 @@
 
 # filetypes: binary: b, text: t (default)
 
+filein = open('test1.txt', mode='a+')
+# print(type(filein.read()))
+# print(type(filein.readline()))
+# print(filein.readlines())
+filein.seek(0)
+for line in filein:
+    print(line)
+    print(type(line))
+    print(list(line))
+
+text = "Add this text to the file.\n"
+filein.write(text)
+
+filein.close()
+
+
+
+
+
+
+
+
 
 # Tips
 # NEW LINE
