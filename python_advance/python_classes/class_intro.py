@@ -8,4 +8,3 @@ class Dog:
 
     def count(self):
         pass
-
