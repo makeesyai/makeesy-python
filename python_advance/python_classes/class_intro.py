@@ -2,44 +2,26 @@
 # Class variable vs instance variable
 
 class Dog:
-    """
-    Here we add the description for the class
-    """
-    counter = 0
+    counter = 0  # Class variables
 
-    def __init__(self, name, age, color):
-        self.name = name
+    def __init__(self, name, age):
+        self.name = name  # Instance variables
         self.age = age
-        self.color = color
         Dog.counter += 1
 
     def greet(self):
         return f"Hello, {self.name}"
 
 
-class DogType(Dog):
-    def __init__(self, name, age, color, breed):
-        super(DogType, self).__init__(name, age, color)
-        self.breed = breed
-
-    def type(self):
-        return self.breed
-
-    def get_name(self):
-        return self.name
-
-    def get_age(self):
-        return self.age
-
-    def get_color(self):
-        return self.color
-
-
-d1 = Dog('lola', 1, 'brown')
-d1.__class__.counter = 20
 print(Dog.counter)
-print(d1.greet())
-# print(d1.get_age())
-# print(d1.get_name())
-# print(d1.get_color())
-# print(d1.type())
+dog1 = Dog("Tommy", 2)
+print(Dog.counter)
+dog2 = Dog("Baalu", 1)
+print(Dog.counter)
+print(type(dog1))
+
+dog1 = Dog("Tommy", 2)
+print(dog1.name)
+print(dog1.age)
+print(dog1.greet())
+
