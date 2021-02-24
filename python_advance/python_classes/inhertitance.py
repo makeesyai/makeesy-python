@@ -1,50 +1,42 @@
+# Inheritance: provides us with the capability to inherit the
+# properties/attributes of the one class to another class
+
+# Usage:
+# 1. avoid writing the same code again and again.
+# 2. add more features to a class or modify the existing behavior.
+# Note: all classes inherit from 'object' class
+
 # Simple Inheritance
 # Multilevel Inheritance
 # Multiple inheritance
+# Method Resolution Order(MRO)
 
-class BaseA(object):
-    def __init__(self, a):
-        self.a = a
+class Person(object):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-    def hi_from_baseA_class(self):
-        print("Hi from BaseA class")
+    def get_name(self):
+        return self.name
 
-
-class BaseB(object):
-    def __init__(self, b):
-        self.b = b
-
-    def hi_from_baseB_class(self):
-        print("Hi from BaseB class")
+    def get_age(self):
+        return self.age
 
 
-class ExtendedClass(BaseA, BaseB):
-    def __init__(self, a, b):
-        super(BaseA, self).__init__(a)
-        super(BaseA, self).__init__(b)
+class Employee(Person):
+    def __init__(self, name, age, employee_id):
+        super(Employee, self).__init__(name, age)
+        self.employee_id = employee_id
 
-    def hi_from_extended_class(self):
-        print("Hi from Extended class...")
-        
-        
-class MultilevelInheritance(ExtendedClass):
-    def __init__(self):
-        super(MultilevelInheritance, self).__init__()
-        pass
-
-    def hi_from_mulitilevel_class(self):
-        print('hi from multilevel class...')
+    def get_employee_id(self):
+        return self.employee_id
 
 
-class MultipleInheritance(BaseA, BaseB):
-    def __init__(self):
-        super(MultipleInheritance, self).__init__()
-        pass
+person = Person("Raj Nath Patel", 35)
+print(person.name)
+print(person.age)
 
-
-base = BaseA(2)
-base.hi_from_baseA_class()
-extended = ExtendedClass(2, 3)
-print(extended.a, extended.b)
-extended.hi_from_baseA_class()
-extended.hi_from_extended_class()
+employee = Employee("Raj Kumar", 36, 123)
+print(employee.get_name())
+print(employee.get_age())
+print(employee.get_employee_id())
