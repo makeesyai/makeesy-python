@@ -9,13 +9,11 @@ def func(*args):
     return res
 
 
-def func_with_keywords(first_name, last_name, **kwargs):
-    if kwargs:
-        full_name = " ".join([first_name, kwargs['middle_name'], last_name, kwargs['address']])
-    else:
-        full_name = " ".join([first_name, last_name])
-    return full_name
+def func_with_keywords(first_name, last_name, **kwrags):
+    if kwrags:
+        return ' '.join([first_name, kwrags['middle_name'], last_name, kwrags['address']])
+    return ' '.join([first_name, last_name])
 
 
-print(func(2, 3, 3, 5, 6, 4, 56, 67))
-print(func_with_keywords('Raj', 'Patel', middle_name='Nath', address='Dublin Ireland'))
+# print(func(2, 3, 3, 5, 1.2, 400))
+print(func_with_keywords('Raj', 'Patel', middle_name='Nath', address='Dublin, Ireland'))
