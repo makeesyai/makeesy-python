@@ -5,15 +5,15 @@
 
 class String(object):
     def __new__(cls, *args, **kwargs):
-        print('__new__ is called')
+        print('Method __new__ is executed...')
         return super(String, cls).__new__(cls)
 
     def __init__(self, inp):
-        print('Init is called')
+        print('Init is called...')
         self.inp = inp
 
     def __repr__(self):
-        print('called __repr__')
+        print('Method __repr__ is executed..')
         return self.inp
 
     def __add__(self, other):
@@ -25,11 +25,11 @@ class Number(object):
         pass
 
     def __call__(self, *args, **kwargs):
-        print('Executed __call__ method...')
+        print('Method __call__ is executed...')
         return self.forward(*args, **kwargs)
 
     def forward(self, x):
-        print('forward is called')
+        print('Forward is called...')
         return x + 10
 
 
