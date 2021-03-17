@@ -33,9 +33,9 @@ class Number(object):
         return x + 10
 
 
-# name = String('Hello')
-# print(name)
-# print(name + ' Raj')
+name = String('Hello')
+print(name)
+print(name + ' Raj')
 
 n = Number()
 print(n(10))
