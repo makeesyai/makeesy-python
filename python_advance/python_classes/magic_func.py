@@ -6,15 +6,14 @@
 # Making a class instance callable using __call__
 
 class String(object):
-    def __init__(self, inp):
-        self.inp = inp
+    def __init__(self, greet):
+        self.greet = greet
 
     def __repr__(self):
-        print('Method __repr__ is executed..')
-        return self.inp
+        return self.greet
 
     def __add__(self, other):
-        return self.inp + other
+        return self.greet + other
 
 
 class ObjectCreator(object):
@@ -22,28 +21,25 @@ class ObjectCreator(object):
         print('Init is called...')
 
     def __new__(cls, *args, **kwargs):
-        print('Method __new__ is executed...')
+        print('Method __new__ executed...')
         return super(ObjectCreator, cls).__new__(cls)
 
 
 class Number(object):
-    def __init__(self):
-        pass
+    def __init__(self, num):
+        self.num = num
 
     def __call__(self, *args, **kwargs):
-        print('Method __call__ is executed...')
         return self.forward(*args, **kwargs)
 
     def forward(self, x):
-        print('Forward is called...')
-        return x + 10
+        return x + self.num
 
 
-name = String('Hello')
-print(name)
-print(name + ' Raj')
+greet = String('Hello')
+print(greet + " Raj Nath Patel")
 
 obj = ObjectCreator()
 
-n = Number()
-print(n(10))
+number = Number(10)
+print(number(20))
