@@ -1,3 +1,12 @@
+# Multiple inheritance with supper method
+# Create A, and B, then inherit both in extended class
+# 1. Test init without supper()
+# 2. Add super in first class in the inheritance and print the consumption of the arguments
+# 3. Change the order of the classes in inheritance order,
+# for example if it was (A,B) change it to (B, A), it'll fail
+# 4. Change the order of arguments and fix with keyword arguments
+# 5. Add C as parent class to A, and now pass 3 arguments, show that MRO is DFS
+
 class C(object):
     def __init__(self, c, *args, **kwargs):
         self.c = c
@@ -30,8 +39,6 @@ class B(object):
 
 class Extended(A, B):
     def __init__(self, *args, **kwargs):
-        # kwargs['a'] = a
-        # kwargs['b'] = b
         print(args, kwargs)
         super(Extended, self).__init__(*args, **kwargs)
 
@@ -40,3 +47,4 @@ c = Extended(2, 3, 4)
 print(c.a)
 print(c.b)
 print(c.c)
+c.hello()
