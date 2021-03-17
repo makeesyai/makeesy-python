@@ -1,5 +1,5 @@
 # Dunder (Double underscore name Double underscore) methods or magic methods
-# These are commonly used for operator overloading.
+# Commonly used for operator overloading.
 # __init__() and __new__()
 # Making a class instance callable using __call__
 
