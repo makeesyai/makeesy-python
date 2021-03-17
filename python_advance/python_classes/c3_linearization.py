@@ -1,3 +1,5 @@
+# Link: https://medium.com/@__hungrywolf/mro-in-python-3-e2bcd2bd6851
+
 # Algo:
 # Linearization:
 # L[C] = C + merge of linearization of parents of C and
