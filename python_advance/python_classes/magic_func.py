@@ -4,12 +4,7 @@
 # Making a class instance callable using __call__
 
 class String(object):
-    def __new__(cls, *args, **kwargs):
-        print('Method __new__ is executed...')
-        return super(String, cls).__new__(cls)
-
     def __init__(self, inp):
-        print('Init is called...')
         self.inp = inp
 
     def __repr__(self):
@@ -18,6 +13,15 @@ class String(object):
 
     def __add__(self, other):
         return self.inp + other
+
+
+class ObjectCreator(object):
+    def __init__(self):
+        print('Init is called...')
+
+    def __new__(cls, *args, **kwargs):
+        print('Method __new__ is executed...')
+        return super(ObjectCreator, cls).__new__(cls)
 
 
 class Number(object):
@@ -36,6 +40,8 @@ class Number(object):
 name = String('Hello')
 print(name)
 print(name + ' Raj')
+
+obj = ObjectCreator()
 
 n = Number()
 print(n(10))
