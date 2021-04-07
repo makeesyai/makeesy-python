@@ -15,7 +15,7 @@
 # it to the linearization of C and remove all of its instances from the lists in the merge.
 # Otherwise, look at the head of the next list and take it if it is a good head.
 # Step 3:- Then repeat the operation until all the classes are removed or
-# it is impossible to find a good head.
+# it is impossible to find a good head (will raise an exception).
 
 class F(object):
     pass
