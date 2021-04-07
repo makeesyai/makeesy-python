@@ -1,7 +1,7 @@
 # Link: https://medium.com/@__hungrywolf/mro-in-python-3-e2bcd2bd6851
 
 # Algo:
-# L[C(B1 ... BN)] = C + merge(L[B1], L[B2]... L[BN], B1 ... BN)
+# L[C(B1, B2 ... BN)] = C + merge(L[B1], L[B2] ... L[BN], B1B2 ... BN)
 # L[object] = object.
 # TAIL: B1(head) B2B3..BN(tail)
 
