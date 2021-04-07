@@ -18,3 +18,6 @@ print(var_tuple)
 var_tuple = (1, 2, 3, 4)
 print(var_tuple)
 # var_tuple[1] = "python"  # ERROR
+
+
+# Tuple Methods

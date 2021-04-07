@@ -15,7 +15,7 @@
 # print(type(var_list))
 
 # Create with values
-var_list = ["hello", 100, 200, "world", 123.30, 100]
+var_list = ["hello", 100, 200, 500, "world", 123.30, 100]
 print(var_list)
 
 # Get (indexing)
@@ -24,11 +24,7 @@ item = var_list[1]
 # Replace (indexing)
 var_list[2] = 500
 
-# Append
+# List Methods
 var_list.append("Python")
-print(var_list)
-
-# Remove
-var_list.remove(100)
 print(var_list)
 
