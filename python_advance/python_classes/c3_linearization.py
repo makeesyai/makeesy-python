@@ -56,9 +56,9 @@ class A(B, C):
 
 # L(A(B, C)) = A + merge(L[A], L[B], AB) = A + merge(BDEO, CDFO, BC)
 # = A + B + merge(DEO, CDFO, C) = A + B + C + merge(DEO, DFO)
-# = A+B+C+D +merge(EO, FO)
-# =A+B+C+D+E+merge(O, FO)
-# =A+B+C+D+E+F+merge(O,O)
-# =A+B+C+D+E+F+O
+# = A + B + C + D + merge(EO, FO)
+# = A + B + C + D + E + merge(O, FO)
+# = A + B + C + D + E + F + merge(O,O)
+# = A + B + C + D + E + F + O
 
 print(A.__mro__)
