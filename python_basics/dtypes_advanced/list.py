@@ -1,11 +1,10 @@
-# Python have 4 types of built in Data Structures namely-
 # Ordered (indexing is allowed): List, Tuple
 # Unordered (indexing is not allowed): Dictionary, and Set
 
 # Mutable (can be changed after creation): List, Dictionary, and Set
 # Immutable ((can not be changed after creation)): Tuple, and Frozen Set
 
-# LIST: is a mutable data structure i.e items can be added to list later after the list creation.
+# LIST: is a mutable data type i.e items can be added to list later after the list creation.
 # it need not be always homogeneous i.e. a single list can contain strings, integers, as well as objects.
 
 # Create empty
