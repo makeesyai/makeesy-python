@@ -1,16 +1,17 @@
 # The basic operators are simple (we will focus mainly on exceptions)
-# Arithmetic operators (+, -, *,  /, //, %, **)
+# Arithmetic operators (+, -, *,  /, // (explain), %, **)
 # Arithmetic Operator Functions [add, sub, mul, truediv,
 # floordiv, mod, pow]
 import operator
 a = 5
-b = 3
+b = -3
 added = a + b
 added_fun = operator.add(a, b)
 multiplication = a * b
 multiplication_fun = operator.mul(a, b)
 div = a / b
 div_fun = operator.truediv(a, b)
+# Explain
 div_floor = a // b
 div_floor_fun = operator.floordiv(a, b)
 mod = a % b
@@ -57,11 +58,11 @@ b = 3
 a **= b
 print(a)
 
-# Operator Precedence (BODMAS: Bracket, Order, Div, Mul, Add, Sub)
+# Operator Precedence (BODMAS: Bracket, Order/Power, Div, Mul, Add, Sub)
 a = 5
 b = 3
 out = a * b / a - b + a
-print(out)
+
 
 # Right-Left associativity of Power operator
 a = 4
