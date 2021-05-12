@@ -1,3 +1,8 @@
+# Multiprocessing: ability of a system to support more than one processor at the same time.
+# Requires-
+# 1. Multiprocessor - more than one central processor.
+# 2. Hyper-Threading - makes each core look like two CPUs to the operating system
+
 import time
 from multiprocessing import Process
 
