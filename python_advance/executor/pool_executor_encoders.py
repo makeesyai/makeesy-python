@@ -33,16 +33,17 @@ if __name__ == '__main__':
     ]
     
     start = time.time()
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:
         embs = [executor.submit(enc_s1, train_text), executor.submit(enc_s2, train_text, ),
                 executor.submit(enc_s3, train_text, )]
         embs_final = [e.result() for e in embs]
     print(f'The time taken by thread pool={time.time() - start}')
 
     start = time.time()
-    with ProcessPoolExecutor(max_workers=8) as executor:
+    with ProcessPoolExecutor(max_workers=3) as executor:
         embs = [executor.submit(enc_s1, train_text), executor.submit(enc_s2, train_text, ),
                 executor.submit(enc_s3, train_text, )]
         embs_final = [e.result() for e in embs]
-    print(f'The time taken by thread pool={time.time() - start}')
     print(f'The time taken by process pool={time.time() - start}')
+
+
