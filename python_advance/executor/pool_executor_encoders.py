@@ -3,22 +3,23 @@ from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 from sentence_transformers import SentenceTransformer
 import pandas as pd
 
+sbert1 = SentenceTransformer('distiluse-base-multilingual-cased-v1')
+sbert2 = SentenceTransformer('paraphrase-xlm-r-multilingual-v1')
+sbert3 = SentenceTransformer('LaBSE')
+
 
 def enc_s1(text):
     print('Running first encoder...')
-    sbert1 = SentenceTransformer('distiluse-base-multilingual-cased-v1')
     return sbert1.encode(text)
 
 
 def enc_s2(text):
     print('Running second encoder...')
-    sbert2 = SentenceTransformer('paraphrase-xlm-r-multilingual-v1')
     return sbert2.encode(text)
 
 
 def enc_s3(text):
     print('Running third encoder...')
-    sbert3 = SentenceTransformer('LaBSE')
     return sbert3.encode(text)
 
 
