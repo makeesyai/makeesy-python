@@ -1,6 +1,7 @@
 import time
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 from sentence_transformers import SentenceTransformer
+import pandas as pd
 
 
 def enc_s1(text):
@@ -26,12 +27,8 @@ if __name__ == '__main__':
     sec = 5
     num = 200000000
 
-    train_text = [
-        'These models find semantically similar sentences within one language or across languages.',
-        'Bitext mining describes the process of finding translated sentence pairs in two languages.',
-        'If this is your use-case, the following model gives the best performance.'
-    ]
-    
+    train_df = pd.read_csv('text.csv')
+    train_text = train_df.Message.values[:100]
     start = time.time()
     with ThreadPoolExecutor(max_workers=3) as executor:
         embs = [executor.submit(enc_s1, train_text), executor.submit(enc_s2, train_text, ),
